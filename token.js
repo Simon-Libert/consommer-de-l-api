@@ -1,5 +1,3 @@
-const url = 'https://reqres.in/api/users';
-
 const addUserForm = document.getElementById('addUser');
 
 addUserForm.addEventListener('submit', (event) => {
@@ -14,21 +12,18 @@ addUserForm.addEventListener('submit', (event) => {
 		dataToInsert[key] = value;
 	});
 
-	fetch('https://reqres.in/api/users', {
+	const myHeaders = new Headers();
+	myHeaders.append('Content-Type', 'application/json');
+	myHeaders.append('Authorization', '1234abcd');
+	fetch('https://https://reqres.in/api/register.in/api/users', {
 		method: 'POST',
 		body: JSON.stringify(dataToInsert),
 		headers: {
-			Accept: 'application/json',
-			'Content-Type': 'application/json',
+			Accept: myHeaders,
 		},
 	})
 		.then((res) => res.json().then((response) => ({ status: res.status, response })))
 		.then((result) => {
 			console.log(result);
 		});
-});
-
-fetch(order_url, {
-	headers: myHeaders,
-	method: 'GET',
 });

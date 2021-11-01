@@ -1,4 +1,4 @@
-/* const addUserForm = document.getElementById('addUser');
+const addUserForm = document.getElementById('addUser');
 
 addUserForm.addEventListener('submit', (event) => {
 	event.preventDefault();
@@ -24,11 +24,11 @@ addUserForm.addEventListener('submit', (event) => {
 		.then((result) => {
 			console.log(result);
 		});
-}); */
+});
 
 //const addUsers = document.getElementById('addUser');
 
-const url = 'https://reqres.in/api/users';
+/* const url = 'https://reqres.in/api/users';
 function sendInfo() {
 	const request = fetch(url, {
 		method: 'POST',
@@ -44,6 +44,6 @@ function sendInfo() {
 		const data = await request.json();
 		console.log(data);
 	}
-}
+} */
 
 // sendInfo();
