@@ -27,14 +27,24 @@ const getUsers = () => {
 
 getUsers();
 
-/* async function ab() {
-	const request = await fetch('https://reqres.in/api/users');
-	if (!request) console.log('erreur');
-	const response = await request.json();
-	const users = response.data;
-	console.log(users);
+/* const url = 'https://reqres.in/api/users?page=2';
+async function getUsers() {
+	const request = await fetch(url, {
+		method: 'GET',
+	});
+
+	if (!request.ok) {
+		alert("y'a une couille dans l'beurre!");
+	} else {
+		let datas = await request.json(); */ // on récupère les données en json et on en fait un objet js;
+/* console.log(datas); */
+
+/* 		document.querySelector('.users').textContent = datas.data[0];
+		console.log(datas.data);
+	}
+	// on va stocker fetch dans variable : const request;
+	//await veur dire qu'on va attendre fetch
 }
 
-ab(); */
-
-// la 2eme fonction est une fonction asynchrone contenant une requête.
+getUsers();
+ */
