@@ -1,7 +1,7 @@
 const usersBlock = document.querySelector('.users');
 
-const getUsers = () => {
-	fetch('https://reqres.in/api/users?page=2')
+async function getUsers() {
+	await fetch('https://reqres.in/api/users?page=2')
 		.then((res) => res.json())
 		.then((result) => {
 			const users = result.data; // then = call back, tout ce qui est dans le callback reste à l'int;
@@ -23,7 +23,7 @@ const getUsers = () => {
 			}
 			console.log(result.data);
 		});
-};
+}
 
 getUsers();
 
@@ -38,13 +38,18 @@ async function getUsers() {
 	} else {
 		let datas = await request.json(); */ // on récupère les données en json et on en fait un objet js;
 /* console.log(datas); */
-
-/* 		document.querySelector('.users').textContent = datas.data[0];
-		console.log(datas.data);
-	}
+/* datas.data.map((item) => {
+			let html = `
+			  <h2>${item.first_name} ${item.last_name} ${item.id}</h2>
+			  <p>${item.email}</p>
+			`;
+			document.querySelector('.users').insertAdjacentHTML('beforeend', html);
+		}); */
+/* document.querySelector('.users').textContent = datas.data[0].email; */
+//console.log(datas.data);
+/* 	}
 	// on va stocker fetch dans variable : const request;
 	//await veur dire qu'on va attendre fetch
 }
 
-getUsers();
- */
+getUsers(); */
