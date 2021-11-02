@@ -21,5 +21,6 @@ loginForm.addEventListener('submit', (event) => {
 		.then((res) => res.json().then((response) => ({ status: res.status, response })))
 		.then((result) => {
 			localStorage.setItem('myToken', result.response.token);
-		});
+		})
+		.catch((Err) => console.log(Err));
 });
