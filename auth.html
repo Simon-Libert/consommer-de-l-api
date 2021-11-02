@@ -8,10 +8,7 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="users"></div>
-		<div class="login"></div>
-
-		<form id="addUser">
+		<form id="loginForm">
 			<div>
 				<label for="email"><small>champ obligatoire</small></label>
 				<input
@@ -24,23 +21,12 @@
 			</div>
 
 			<div>
-				<label for="first_name"><small>champ obligatoire</small></label>
+				<label for="password"><small>champ obligatoire</small></label>
 				<input
-					type="text"
-					name="first_name"
-					id="firstName"
-					placeholder="Entrez votre nom"
-					required
-				/>
-			</div>
-
-			<div>
-				<label for="name"><small>champ obligatoire</small></label>
-				<input
-					type="text"
-					name="last_name"
-					id="lastName"
-					placeholder="Entrez votre prenom"
+					type="password"
+					name="password"
+					id="password"
+					placeholder="Entrez votre password"
 					required
 				/>
 			</div>
@@ -50,9 +36,6 @@
 			</div>
 		</form>
 
-		<script src="./index.js"></script>
-		<script src="./send.js"></script>
-		<script src="./delete.js"></script>
 		<script src="./token.js"></script>
 	</body>
 </html>
