@@ -12,15 +12,25 @@ addUserForm.addEventListener('submit', (event) => {
 		dataToInsert[key] = value;
 	});
 
+	document.getElementById('passWord').addEventListener('click', () => {
+		localStorage.setItem(
+			'myToken',
+			JSON.stringify(
+				'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
+			)
+		);
+	});
+
+	let token = JSON.parse(localStorage.getItem('myToken'));
 	const myHeaders = new Headers();
 	myHeaders.append('Content-Type', 'application/json');
-	myHeaders.append('Authorization', '1234abcd');
-	fetch('https://https://reqres.in/api/register.in/api/users', {
+	myHeaders.append('Authentication', `Bearer ${token}`);
+
+	fetch('https://reqres.in/api/login', {
 		method: 'POST',
+		mode: 'cors',
 		body: JSON.stringify(dataToInsert),
-		headers: {
-			Accept: myHeaders,
-		},
+		headers: myHeaders,
 	})
 		.then((res) => res.json().then((response) => ({ status: res.status, response })))
 		.then((result) => {
