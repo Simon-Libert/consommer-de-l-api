@@ -23,27 +23,6 @@ addUserForm.addEventListener('submit', (event) => {
 		.then((res) => res.json().then((response) => ({ status: res.status, response })))
 		.then((result) => {
 			console.log(result);
-		});
+		})
+		.catch((err) => console.log(err));
 });
-
-//const addUsers = document.getElementById('addUser');
-
-/* const url = 'https://reqres.in/api/users';
-function sendInfo() {
-	const request = fetch(url, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/x-www-form-urlencoded', // permet de recevoir une méthode post, comme si on envoyait un vrai formulaire
-		},
-		body: new URLSearchParams({ first_name, last_name, email }),
-	});
-
-	if (!request.ok) {
-		alert("C'est la merde!");
-	} else {
-		const data = await request.json();
-		console.log(data);
-	}
-} */
-
-// sendInfo();

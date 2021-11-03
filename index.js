@@ -26,30 +26,3 @@ async function getUsers() {
 }
 
 getUsers();
-
-/* const url = 'https://reqres.in/api/users?page=2';
-async function getUsers() {
-	const request = await fetch(url, {
-		method: 'GET',
-	});
-
-	if (!request.ok) {
-		alert("y'a une couille dans l'beurre!");
-	} else {
-		let datas = await request.json(); */ // on récupère les données en json et on en fait un objet js;
-/* console.log(datas); */
-/* datas.data.map((item) => {
-			let html = `
-			  <h2>${item.first_name} ${item.last_name} ${item.id}</h2>
-			  <p>${item.email}</p>
-			`;
-			document.querySelector('.users').insertAdjacentHTML('beforeend', html);
-		}); */
-/* document.querySelector('.users').textContent = datas.data[0].email; */
-//console.log(datas.data);
-/* 	}
-	// on va stocker fetch dans variable : const request;
-	//await veur dire qu'on va attendre fetch
-}
-
-getUsers(); */
